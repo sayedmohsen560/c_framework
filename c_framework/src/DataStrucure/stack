@@ -1,0 +1,18 @@
+/*
+ * stack
+ *
+ *  Created on: Nov 8, 2018
+ *      Author: sayed
+ */
+
+#ifndef DATASTRUCURE_STACK_
+#define DATASTRUCURE_STACK_
+
+int isfull() ;
+int isempty();
+void push(int data);
+int peek();
+int pop();
+int getstacksize();
+
+#endif /* DATASTRUCURE_STACK_ */

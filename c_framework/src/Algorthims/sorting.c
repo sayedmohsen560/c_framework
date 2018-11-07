@@ -1,11 +1,11 @@
 #include "utilites.h"
 
-void bubbleSort(int *arr, int length) {
+void bubbleSort(int *arr, int size) {
 	int min_loc;
 	int i, j;
-	for (i = 0; i < length - 1; i++) {
+	for (i = 0; i < size - 1; i++) {
 		min_loc = i;
-		for (j = i + 1; j <= length - 1; j++) {
+		for (j = i + 1; j <= size - 1; j++) {
 			if (arr[j] <= arr[min_loc]) {
 				makeSwap(&arr[min_loc], &arr[j]);
 			}
@@ -14,9 +14,9 @@ void bubbleSort(int *arr, int length) {
 
 	}
 }
-void inserationsort(int *arr, int length) {
+void inserationsort(int *arr, int size) {
 	int i, j = 1, key;
-	while (j <= length) {
+	while (j <= size) {
 		key = arr[j];
 		i = j - 1;
 		while (i >= 0 && key < arr[i]) {
@@ -33,21 +33,21 @@ void inserationsort(int *arr, int length) {
 void mergesubarrays(int *arr, int left, int middle, int right) {
 
 	int l = 0, r = 0, j = 0, k = left;
-	int l_length = middle - left + 1;
-	int r_length = right - middle;
-	int leftarr[l_length];
-	int rightarr[r_length];
+	int l_size = middle - left + 1;
+	int r_size = right - middle;
+	int leftarr[l_size];
+	int rightarr[r_size];
 
 	/* initialize left and right arrays */
-	for (j = 0; j < l_length; j++) {
+	for (j = 0; j < l_size; j++) {
 		leftarr[j] = arr[left + j];
 	}
 
-	for (j = 0; j < r_length; j++) {
+	for (j = 0; j < r_size; j++) {
 		rightarr[j] = arr[middle + 1 + j];
 	}
 
-	while (l < l_length && r < r_length) {
+	while (l < l_size && r < r_size) {
 
 		if (leftarr[l] < rightarr[r]) {
 			arr[k] = leftarr[l];
@@ -61,12 +61,12 @@ void mergesubarrays(int *arr, int left, int middle, int right) {
 
 	}
 
-	while (l < l_length) {
+	while (l < l_size) {
 		arr[k] = leftarr[l];
 		k++;
 		l++;
 	}
-	while (r < r_length) {
+	while (r < r_size) {
 		arr[k] = rightarr[r];
 		r++;
 		k++;
@@ -87,10 +87,10 @@ void mergesort(int *arr, int left, int right){
 	}
 }
 void quickSort(int arr[], int right, int left) {
-	int pivot = arr[left];
+	int pivot = arr[left];/* choose a random element to be your pivot  arr[middle] is perfered*/
 	int i = right;
 	int j = left;
-
+/* make sure that pivot in right position */
 	while (i <= j) {
 
 		while (arr[i] < pivot) {
@@ -115,12 +115,12 @@ void quickSort(int arr[], int right, int left) {
 		quickSort(arr, right, j);
 	}
 }
-void selectionSort(int *arr, int length) {
+void selectionSort(int *arr, int size) {
 	int min_loc;
 	int i, j;
-	for (i = 0; i < length - 1; i++) {
+	for (i = 0; i < size - 1; i++) {
 		min_loc = i;
-		for (j = i + 1; j <= length - 1; j++) {
+		for (j = i + 1; j <= size - 1; j++) {
 			if (arr[j] <= arr[min_loc]) {
 				min_loc = j;
 			}
