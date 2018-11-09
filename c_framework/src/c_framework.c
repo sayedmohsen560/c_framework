@@ -3,20 +3,15 @@
  Name        : c_framework.c
  Author      : sayed mohsen
  Version     :
- Copyright   : All copyrights are reserved
- Description : my c framework
+ Copyright   : my c framework
+ Description : Hello World in C, Ansi-style
  ============================================================================
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Algorthims/sorting.h"
-#include "arrays/arrays.h"
-#include "arithmatic/arithmatic.h"
-#include "strings/strings.h"
 
 int main(void) {
-
-
-	return 0;
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
 }

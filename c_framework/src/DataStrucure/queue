@@ -1,0 +1,17 @@
+/*
+ * queue
+ *
+ *  Created on: Nov 9, 2018
+ *      Author: sayed
+ */
+
+#ifndef DATASTRUCURE_QUEUE_
+#define DATASTRUCURE_QUEUE_
+
+int isfull() ;
+int isempty() ;
+void enqueue(int data);
+int dequeue();
+void printqueue();
+
+#endif /* DATASTRUCURE_QUEUE_ */

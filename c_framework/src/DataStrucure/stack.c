@@ -1,18 +1,18 @@
 /*stack implementation in simple way  using array */
-
+#include<stdio.h>
 #define STACKSIZE 10
 
 int arr[STACKSIZE];
 int top = -1;
 
-int isfull() {
+int isstackfull() {
 	if (top == (STACKSIZE - 1)) {
 		return 1;
 	}
 	return 0;
 }
 
-int isempty() {
+int isstackempty() {
 	if (top == -1) {
 		return 1;
 	}
@@ -20,7 +20,7 @@ int isempty() {
 }
 
 void push(int data) {
-	if (!isfull()) {
+	if (!isstackfull()) {
 		top++;
 		arr[top] = data;
 	} else
@@ -29,7 +29,7 @@ void push(int data) {
 
 int pop() {
 	int data;
-	if (!isempty()) {
+	if (!isstackempty()) {
 		data = arr[top];
 		top--;
 		return data;

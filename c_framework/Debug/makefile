@@ -12,6 +12,8 @@ RM := rm -rf
 -include src/strings/subdir.mk
 -include src/arrays/subdir.mk
 -include src/arithmatic/subdir.mk
+-include src/DataStrucure/linkedlists/subdir.mk
+-include src/DataStrucure/subdir.mk
 -include src/Algorthims/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
